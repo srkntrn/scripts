@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# myip — print this host's public IP via ifconfig.me
+set -euo pipefail
+ip=$(curl -fsS --max-time 5 https://ifconfig.me)
+echo "$ip"
